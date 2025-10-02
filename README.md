@@ -43,14 +43,14 @@ This project is an interactive data analytics dashboard built with **Streamlit**
 
 4. **Run the Streamlit app:**
     ```bash
-    streamlit run student_performance2.py
+    streamlit run student_performance.py
     ```
 
 5. **Upload the `student-mat.csv` file** (or your dataset) when prompted.
 
 ## File Structure
 
-- `student_performance2.py` — Main Streamlit dashboard application
+- `student_performance.py` — Main Streamlit dashboard application
 - `Answers_to_the_Questions.md` — Detailed answers and analysis for lab questions
 - `assets/` — Folder for images/icons (e.g., analysis.png, chart-histogram.svg)
 - `.gitignore` — Ignores `node_modules/`, Python cache, and environment files
