@@ -25,26 +25,57 @@ st.set_page_config(
 st.markdown("""
 <style>
     
-    /* Style all sidebar buttons */
-    div.stButton > button {
-        background-color: #6495ED;  /* button background */
-        color: white;               /* text color */
-        border-radius: 8px;         /* rounded corners */
-        border: none;               /* remove border */
-        font-weight: bold;
-        transition: 0.3s;
+    
+       /* Make sidebar accent (slider, selected options, etc.) blue */
+    [data-testid="stSidebar"] .stSlider > div[data-baseweb="slider"] .css-14g5y4m {
+        background: #1f77b4 !important;
     }
-
-    div.stButton > button:hover {
-        background-color: #155a8a;  /* hover color */
+    [data-testid="stSidebar"] .stSlider .css-1gv0vcd {
+        background: #1f77b4 !important;
+    }
+    [data-testid="stSidebar"] .stMultiSelect [data-baseweb="tag"] {
+        background: #1f77b4 !important;
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] .stMultiSelect [data-baseweb="tag"]:hover {
+        background: #155a8a !important;
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] .st-cq {
+        color: #1f77b4 !important;
+    }
+    [data-testid="stSidebar"] .st-bw {
+        color: #1f77b4 !important;
+    }
+    /* Change hover color of chips */
+    .stMultiSelect div[data-baseweb="tag"]:hover {
+        background-color: #155a8a;  /* darker on hover */
         color: #fff;
     }
-    .stMultiSelect div[data-baseweb="tag"] {
-        background-color: #6495ED;  /* background color */
-        color: white;               /* text color */
-        border-radius: 6px;         /* rounded corners */
-        padding: 2px 8px;
-        font-weight: bold;
+    /* Make all sidebar text white */
+    [data-testid="stSidebar"] {
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] label, 
+    [data-testid="stSidebar"] .st-cq, 
+    [data-testid="stSidebar"] .st-bw, 
+    [data-testid="stSidebar"] .st-emotion-cache-1kyxreq, 
+    [data-testid="stSidebar"] .st-emotion-cache-1v0mbdj, 
+    [data-testid="stSidebar"] .st-emotion-cache-1n76uvr, 
+    [data-testid="stSidebar"] .st-emotion-cache-1vzeuhh {
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] .stSlider label {
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] .stCheckbox span {
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] .stSelectbox label {
+        color: #fff !important;
+    }
+    [data-testid="stSidebar"] .stMultiSelect label {
+        color: #fff !important;
     }
     /* Change hover color of chips */
     .stMultiSelect div[data-baseweb="tag"]:hover {
@@ -125,7 +156,7 @@ if uploaded_file is not None:
     df['Performance_Category'] = df['G3'].apply(categorize_performance)
     
     # Sidebar Configuration
-    st.sidebar.markdown("## 🎛️ Dashboard Controls")
+    st.sidebar.markdown("## Dashboard Controls")
     st.sidebar.markdown("---")
     
     # About Section
